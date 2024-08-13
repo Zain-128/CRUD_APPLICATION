@@ -4,10 +4,12 @@ import { ConnectToMongo } from "./config/connect.db.js";
 import authRouter from "./routes/auth.routes.js";
 import { ErrorHandler } from "./middlewares/ErrorHandler.js";
 
-dotenv.config();
-
-ConnectToMongo();
 const app = express();
+dotenv.config();
+ConnectToMongo();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/", authRouter);
 
