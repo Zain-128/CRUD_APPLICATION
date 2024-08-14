@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [count, setCount] = useState(0);
@@ -32,16 +33,24 @@ const Navbar = () => {
         </p>
       )}
       <ul
-        className={`lg:flex items-center gap-8 absolute md:static ${
-          !count ? "-translate-y-[1000px] lg:translate-y-0" : "translate-y-0"
-        } transition-all duration-[2000ms] text-[0.9rem]`}
+        className={`lg:flex items-center gap-8 absolute lg:static ${
+          !count
+            ? "-translate-y-[1000px] translate-x-[1000px] lg:translate-y-0"
+            : "translate-y-0"
+        } transition-all duration-[1000ms] text-[0.9rem] mt-5 lg:mt-0`}
       >
-        <li className="hover:text-gray-300 duration-200">Home </li>
-        <li className="hover:text-gray-300 duration-200">About US </li>
-        <li className="hover:text-gray-300 duration-200">Todo </li>
-        <Button text="Signup" />
-        <Button text="Signin" />
-        <Button text="Signout" />
+        <li className="hover:text-gray-300 duration-200 cursor-pointer py-3">
+          <Link to={"/"}>HOME </Link>
+        </li>
+        <li className="hover:text-gray-300 duration-200 cursor-pointer py-3">
+          <Link to={"/about"}>ABOUT US </Link>
+        </li>
+        <li className="hover:text-gray-300 duration-200 cursor-pointer py-3">
+          <Link to={"/addtodo"}>ADD TODO </Link>
+        </li>
+        <Button text="Signup" extraStyle={"mx-2"} />
+        <Button text="Signin" extraStyle={"mx-2"} />
+        <Button text="Signout" extraStyle={"mx-2"} />
       </ul>
     </nav>
   );
