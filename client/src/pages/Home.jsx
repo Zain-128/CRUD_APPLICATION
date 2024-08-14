@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <main className="min-h-[80vh] flex items-center justify-center bg-black">
+    <main className="min-h-[80vh] flex items-center justify-center ">
       <div className="flex items-center justify-center flex-col max-w-[800px] gap-5 ">
         <h2 className="text-[4rem] font-semibold text-center ">
           Organize your Work and life, Finally
