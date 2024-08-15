@@ -65,7 +65,7 @@ const Navbar = () => {
             location.pathname === "/addtodo" ? "border-b" : ""
           }`}
         >
-          <Link to={"/addtodo"}>ADD TODO </Link>
+          <Link to={"/addtodo"}>TODOS </Link>
         </li>
         <Button text="Signup" extraStyle={""} />
         <Button text="Signin" extraStyle={"lg:mx-0 mx-2"} />
