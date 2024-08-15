@@ -73,7 +73,11 @@ const Navbar = () => {
           extraStyle={""}
           onClickHandler={() => navigate("/signup")}
         />
-        <Button text="Signin" extraStyle={"lg:mx-0 mx-2"} />
+        <Button
+          text="Signin"
+          extraStyle={"lg:mx-0 mx-2"}
+          onClickHandler={() => navigate("/signin")}
+        />
         <Button text="Signout" extraStyle={"lg:mx-0 mx-2"} />
       </ul>
     </nav>
