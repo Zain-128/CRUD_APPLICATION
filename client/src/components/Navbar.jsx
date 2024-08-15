@@ -62,10 +62,10 @@ const Navbar = () => {
         </li>
         <li
           className={`hover:text-gray-300 duration-200 cursor-pointer py-3 my-2 ${
-            location.pathname === "/addtodo" ? "border-b" : ""
+            location.pathname === "/todos" ? "border-b" : ""
           }`}
         >
-          <Link to={"/addtodo"}>TODOS </Link>
+          <Link to={"/todos"}>TODOS </Link>
         </li>
         <Button text="Signup" extraStyle={""} />
         <Button text="Signin" extraStyle={"lg:mx-0 mx-2"} />
