@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  const navigate = useNavigate();
   const handleMenuToggle = () => {
     setMenuOpen((prev) => !prev);
   };
@@ -67,7 +68,11 @@ const Navbar = () => {
         >
           <Link to={"/todos"}>TODOS </Link>
         </li>
-        <Button text="Signup" extraStyle={""} />
+        <Button
+          text="Signup"
+          extraStyle={""}
+          onClickHandler={() => navigate("/signup")}
+        />
         <Button text="Signin" extraStyle={"lg:mx-0 mx-2"} />
         <Button text="Signout" extraStyle={"lg:mx-0 mx-2"} />
       </ul>
