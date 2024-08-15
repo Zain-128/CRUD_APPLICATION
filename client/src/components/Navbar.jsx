@@ -42,8 +42,8 @@ const Navbar = () => {
       <ul
         className={`lg:flex items-center gap-8 absolute  top-14 h-[87vh] lg:h-auto lg:static ${
           !menuOpen
-            ? "-translate-y-[1000px]  lg:translate-y-0"
-            : "translate-y-0"
+            ? "-translate-x-[1000px]  lg:translate-x-0"
+            : "translate-x-0"
         } transition-all duration-[1000ms] text-[14px] mt-5 lg:mt-0   p-3 lg:text-white bg-white/60 text-black  w-screen lg:bg-transparent left-0 lg:w-auto`}
         style={{ backgroundBlur: 8 }}
       >
